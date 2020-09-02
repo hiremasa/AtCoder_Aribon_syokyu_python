@@ -14,6 +14,9 @@ for i in range(1, N):
 
 print(dp[-1])
 
+
+
+################################################
 import numpy as np
 N, K = map(int, input().split())
 H=np.array(list(map(int, input().split())) + [0] * K, dtype=np.int64)
