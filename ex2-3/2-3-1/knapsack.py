@@ -8,3 +8,9 @@ for i in range(1, N+1):
 	dp[i]=dp[i-1]
 	dp[i][w:]=np.maximum(dp[i-1][w:], dp[i-1][W-w+1])
 print(np.max(dp))
+
+
+dp = np.zeros(W + 1, np.int64)
+for w, v in zip(W, V):
+    np.maximum(dp[w:], dp[:-w] + v, out=dp[w:])
+print(dp.max())
