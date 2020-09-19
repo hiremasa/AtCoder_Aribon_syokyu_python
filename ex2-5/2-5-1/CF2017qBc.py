@@ -12,7 +12,7 @@ que=deque()
 
 def nibu():
 	que.append(0)
-	color[0]=True
+	color[0]=1
 
 	while que:
 		p=que.pop()
