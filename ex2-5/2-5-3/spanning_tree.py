@@ -38,5 +38,26 @@ print(mst.sum())
 # 10.0
 
 
+#クラスカル法
+def main():
+	V, E = map(int, input().split())
+	uf = UnionFind(V)
+
+	# 1の過程
+	edges = []
+	for _ in range(E):
+		s, t, w = map(int, input().split())
+		edges.append((w, s, t))
+	edges.sort()
+
+	# 2の過程
+	cost = 0
+	for edge in edges:
+		w, s, t = edge
+		if not uf.same(s, t):
+			cost += w
+			uf.union(s, t)
+	print(cost)
+	return
 
 
