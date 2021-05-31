@@ -75,5 +75,49 @@ print(ans)
 
 
 
+from collections import defaultdict
+import heapq
+N, M, T = map(int, input().split())
+A = list(map(int, input().split()))
+
+
+G = defaultdict(list)
+for _ in range(M):
+	a, b, c = map(int, input().split())
+	G[a - 1].append((b - 1, c))
+	G[b - 1].append((a - 1, c))
+
+def dijkstra(s, t):
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
